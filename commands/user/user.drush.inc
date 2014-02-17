@@ -334,7 +334,7 @@ function drush_user_create($name) {
         $new_user_object = user_save(NULL, $new_user, NULL);
       }
       if ($new_user_object !== FALSE) {
-        _drush_user_print_info($new_user_object->uid);
+        //_drush_user_print_info($new_user_object->uid);
         return $new_user_object->uid;
       }
       else {
