@@ -362,7 +362,7 @@ function drush_user_cancel($name) {
   $uid = drush_db_result($result);
   if ($uid !== FALSE) {
     drush_print("Cancelling the user account with the following information:");
-    _drush_user_print_info($uid);
+    //_drush_user_print_info($uid);
     if (drush_get_option('delete-content') && drush_drupal_major_version() >= 7) {
       drush_print("All content created by this user will be deleted!");
     }
