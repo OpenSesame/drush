@@ -861,7 +861,7 @@ function drush_pm_enable_validate() {
         if (drush_get_option('resolve-dependencies')) {
           drush_log(dt("They are being downloaded."), 'ok');
         }
-        if ((drush_get_option('resolve-dependencies')) || (drush_confirm("Would you like to download them?"))) {
+        if ((drush_get_option('resolve-dependencies')) && (drush_confirm("Would you like to download them?"))) {
           $download = $found;
         }
       }
